@@ -8,7 +8,7 @@ using GooglePlayGames.BasicApi.SavedGame;
 using System;
 using UnityEngine;
 
-namespace GPGS_Services
+namespace VLSaveSystemWithGPGSServices
 {
     [CreateAssetMenu(fileName = "GPGSManager", menuName = "GPGS Services Assets/GPGSManager", order = 0)]
     public class GPGSManager : ScriptableObject

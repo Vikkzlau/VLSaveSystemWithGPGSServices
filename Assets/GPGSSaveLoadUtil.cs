@@ -10,7 +10,7 @@ using UnityEditor;
 using GooglePlayGames;
 #endif
 
-namespace GPGS_Services
+namespace VLSaveSystemWithGPGSServices
 {
     public static class GPGSSaveLoadUtil
     {

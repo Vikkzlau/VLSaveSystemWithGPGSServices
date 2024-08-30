@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GPGS_Services
+namespace VLSaveSystemWithGPGSServices
 {
     [CreateAssetMenu(fileName = "PlayTimeManager", menuName = "GPGS Services Assets/PlayTimeManager", order = 1)]
     public class PlayTimeManager : ScriptableObject
