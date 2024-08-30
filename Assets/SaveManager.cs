@@ -17,7 +17,7 @@ public class SaveManager : MonoBehaviour
     public void Save() 
     {
         SaveData saveData = new (1337);
-        GPGSSaveLoadUtil.SaveObject(saveData, savePath, saveKey);
+        GPGSSaveLoadUtil.SaveObject(saveData, savePath, saveKey, typeof(SaveData));
     }
 
     public void Load()
