@@ -8,9 +8,18 @@ public class SaveManagerEditor : Editor
     {
         DrawDefaultInspector();
         SaveManager controller = (SaveManager)target;
-        if (GUILayout.Button("Test Save and Load."))
+        GUILayout.Label("See Console for test result.");
+        if (GUILayout.Button("Test Save and Load. (XmlSerializer/GPGS)"))
         {
-            controller.Test_SaveLoad_and_PrintToDebugLog();
+            controller.Test_SaveLoad();
+        }
+        if (GUILayout.Button("Test Save and Load. (PlayerPrefs)"))
+        {
+            controller.Test_SaveLoad_PlayerPrefs();
+        }
+        if (GUILayout.Button("Test Xml ByteArray Conversion."))
+        {
+            controller.Test_XmlByteArrayConversion();
         }
     }
 }
