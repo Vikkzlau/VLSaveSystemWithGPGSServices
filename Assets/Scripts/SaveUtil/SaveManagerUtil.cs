@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace VLSaveSystemWithGPGSServices
 {
-    public class SaveManager<T>
+    public class SaveManagerUtil<T>
     {
         public readonly string savePath;
         private readonly string saveKey = "temp";
 
-        public SaveManager(string savefileName, string saveKey)
+        public SaveManagerUtil(string savefileName, string saveKey)
         {
             this.saveKey = saveKey;
             savePath = Application.persistentDataPath + savefileName;

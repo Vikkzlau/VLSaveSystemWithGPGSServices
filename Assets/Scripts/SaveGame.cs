@@ -3,7 +3,7 @@ using VLSaveSystemWithGPGSServices;
 
 public class SaveGame : MonoBehaviour
 {
-    public SaveManager<SaveData> saveManager;
+    public SaveManagerUtil<SaveData> saveManager;
     // e.g. "/save1.dat"
     private const string savefileName = "/save1.dat";
     // e.g. "save1"
@@ -11,7 +11,7 @@ public class SaveGame : MonoBehaviour
 
     private void Start()
     {
-        saveManager = new SaveManager<SaveData>(savefileName, saveKey);
+        saveManager = new SaveManagerUtil<SaveData>(savefileName, saveKey);
     }
 
     // Methods below are for testing purposes only.
