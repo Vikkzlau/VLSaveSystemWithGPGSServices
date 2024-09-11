@@ -1,7 +1,7 @@
 using UnityEngine;
 using VLSaveSystemWithGPGSServices;
 
-public class SaveGame : MonoBehaviour
+public class SaveManager : MonoBehaviour
 {
     public SaveManagerUtil<SaveData> saveManager;
     // e.g. "/save1.dat"
