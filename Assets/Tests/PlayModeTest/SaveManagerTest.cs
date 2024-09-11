@@ -2,19 +2,23 @@ using UnityEngine;
 using NUnit.Framework;
 using UnityEngine.TestTools;
 using System.Collections;
+using VLSaveSystemWithGPGSServices;
 
 public class SaveManagerTest
-{/*
+{
+    private const string savefileName = "/save1.dat";
+    private const string saveKey = "save1";
+
     [UnityTest]
     public IEnumerator Test_SaveLoad()
     {
         GameObject gameObject = new();
-        SaveManager saveManager = gameObject.AddComponent<SaveManager>();
         yield return null;
-        SaveManager.SaveData saveData = new(1337);
+        SaveData saveData = new(1337);
+        var saveManager = new SaveManagerUtil<SaveData>(savefileName, saveKey);
 
-        saveManager.Save(saveData, typeof(SaveManager.SaveData));
-        SaveManager.SaveData loadedData = (SaveManager.SaveData)saveManager.Load(out _);
+        saveManager.Save(saveData);
+        SaveData loadedData = saveManager.Load(out _);
         
         Assert.AreEqual(saveData.HP, loadedData.HP);
     }
@@ -23,12 +27,12 @@ public class SaveManagerTest
     public IEnumerator Test_SaveLoad_PlayerPrefs()
     {
         GameObject gameObject = new();
-        SaveManager saveManager = gameObject.AddComponent<SaveManager>();
         yield return null;
-        SaveManager.SaveData saveData = new(1337);
+        SaveData saveData = new(1337);
+        var saveManager = new SaveManagerUtil<SaveData>(savefileName, saveKey);
 
         saveManager.SaveToPlayerPrefs(saveData);
-        SaveManager.SaveData loadedData = (SaveManager.SaveData)saveManager.LoadFromPlayerPrefs();
+        SaveData loadedData = saveManager.LoadFromPlayerPrefs();
 
         Assert.AreEqual(saveData.HP, loadedData.HP);
     }
@@ -36,12 +40,12 @@ public class SaveManagerTest
     [Test]
     public void Test_XmlByteArrayConversion()
     {
-        SaveManager.SaveData saveData = new(1337);
+        SaveData saveData = new(1337);
 
         byte[] savebyte = VLSaveSystemWithGPGSServices.GPGSSaveLoadUtil.ObjectToByteArray(saveData);
-        SaveManager.SaveData returnedData = 
-            (SaveManager.SaveData)VLSaveSystemWithGPGSServices.GPGSSaveLoadUtil.ByteArrayToObject(savebyte, typeof(SaveManager.SaveData));
+        SaveData returnedData = 
+            (SaveData)VLSaveSystemWithGPGSServices.GPGSSaveLoadUtil.ByteArrayToObject(savebyte, typeof(SaveData));
 
         Assert.AreEqual(saveData.HP, returnedData.HP);
-    }*/
+    }
 }
