@@ -1,3 +1,4 @@
+// This file contains GPGS SDK codes by Android Open Source Project licensed under Apache 2.0 license.
 // Google Play Games plugin must be installed first.
 // Read this page to install GPG plugin for Unity: https://developer.android.com/games/pgs/unity/unity-start
 #if UNITY_ANDROID
@@ -298,5 +299,3 @@ namespace VLSaveSystemWithGPGSServices
         #endif
     }
 }
-// Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described
-// in the Creative Commons 2.5 Attribution License. https://developer.android.com/games/pgs/unity/overview

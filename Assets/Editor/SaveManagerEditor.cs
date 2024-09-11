@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SaveManager))]
+[CustomEditor(typeof(SaveGame))]
 public class SaveManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-        SaveManager controller = (SaveManager)target;
+        SaveGame controller = (SaveGame)target;
         GUILayout.Label("See Console for test result.");
         if (GUILayout.Button("Test Save and Load. (XmlSerializer/GPGS)"))
         {

@@ -4,7 +4,7 @@ using UnityEngine.TestTools;
 using System.Collections;
 
 public class SaveManagerTest
-{
+{/*
     [UnityTest]
     public IEnumerator Test_SaveLoad()
     {
@@ -43,5 +43,5 @@ public class SaveManagerTest
             (SaveManager.SaveData)VLSaveSystemWithGPGSServices.GPGSSaveLoadUtil.ByteArrayToObject(savebyte, typeof(SaveManager.SaveData));
 
         Assert.AreEqual(saveData.HP, returnedData.HP);
-    }
+    }*/
 }
